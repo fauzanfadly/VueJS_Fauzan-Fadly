@@ -1,4 +1,4 @@
-##(2) Version Control and Branch Management (Git)
+(2) Version Control and Branch Management (Git)
 ----------------------------------------------
 
 *   **1.** Version Control merupakan sebuah sarana memanajemen source code version yang telah dikerjakan.
