@@ -5,9 +5,9 @@
 
 * **2.** Git adalah salah satu software Version Control yang dapat memberikan akses, fitur, dan kemudahan dalam mengelola project manajemen kita. Beberapa fitur-fitur yang terdapat pada git ialah :
     ```
-        * **a.** Git Clone                => Untuk menyalin repository online ke lokal.
-        * **b.** Git Create Repository    => Untuk membuat repository baru.
-        * **c.** Git Pull                 => Untuk mengambil update perubahan yang ada di repository online ke lokal.
+        * a. Git Clone                => Untuk menyalin repository online ke lokal.
+        * b. Git Create Repository    => Untuk membuat repository baru.
+        * c. Git Pull                 => Untuk mengambil update perubahan yang ada di repository online ke lokal.
     ```
     
 * **3.** Git sebagai Version Control memiliki banyak fungsi dan manfaat, antaranya :
