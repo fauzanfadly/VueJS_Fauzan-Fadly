@@ -9,6 +9,9 @@
         b. Git Create Repository    => Untuk membuat repository baru.
         c. Git Pull                 => Untuk mengambil update perubahan yang ada di repository online ke lokal.
     ```
+    > a. Git Clone                => Untuk menyalin repository online ke lokal.
+    > b. Git Create Repository    => Untuk membuat repository baru.
+    > c. Git Pull                 => Untuk mengambil update perubahan yang ada di repository online ke lokal.
 
 3. Git sebagai Version Control memiliki banyak fungsi dan manfaat, antaranya :
     a. Memiliki fitur pengelolaan Branch yang mudah.
