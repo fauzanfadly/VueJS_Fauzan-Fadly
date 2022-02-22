@@ -32,8 +32,8 @@ Adalah salah satu software Version Control yang dapat memberikan akses, fitur, d
 ### 1. Membuat Repository baru di Github
 Pada task ini, tugasnya adalah membuat repository baru di Github.
 
-[link untuk github.md](praktikum/link untuk github.md)
+[link untuk github.md](https://github.com/fauzanfadly/VueJS_Fauzan-Fadly/blob/bb9a44f99f7641cd77b4895435c43caa8488747a/2_Version%20Control%20and%20Branch%20Manajement%20(Git)/praktikum/link%20untuk%20github.md)
 
 output:
 
-![Insight Network Github](screenshots/Insight - Network.jpg)
+![Insight Network Github](https://github.com/fauzanfadly/VueJS_Fauzan-Fadly/blob/2a2d48b604ab2700326009bd1a43fc7f30b9a988/2_Version%20Control%20and%20Branch%20Manajement%20(Git)/screenshots/Insight%20-%20Network.jpg)
