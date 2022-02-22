@@ -29,8 +29,12 @@ Adalah salah satu software Version Control yang dapat memberikan akses, fitur, d
     * Dapat diintegrasikan dengan software _Third Part_ yang dapat lebih mudah digunakan.
 
 ## Task
-### 1. Membuat Repository baru di Github
-Pada task ini, tugasnya adalah membuat repository baru di Github.
+1. Membuat Repository baru di Github,
+2. Membuat sebuah project pada branch master,
+3. Membuat branch baru kedua develop,
+4. Membuat branch baru ketiga fitur untuk penambahan fitur dan di merge ke develop,
+5. Membuat branch baru keempat Penambahan fitur lainnya dan di merge ke develop,
+6. Dibuktikan dengan Screenshot Insight -> Network.
 
 [link untuk github.md](https://github.com/fauzanfadly/VueJS_Fauzan-Fadly/blob/bb9a44f99f7641cd77b4895435c43caa8488747a/2_Version%20Control%20and%20Branch%20Manajement%20(Git)/praktikum/link%20untuk%20github.md)
 
