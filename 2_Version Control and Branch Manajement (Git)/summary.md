@@ -32,7 +32,7 @@ Adalah salah satu software Version Control yang dapat memberikan akses, fitur, d
 ### 1. Membuat Repository baru di Github
 Pada task ini, tugasnya adalah membuat repository baru di Github.
 
-[github](./praktikum/link untuk github.md)
+[github](https://github.com/fauzanfadly/VueJS_Fauzan-Fadly/blob/master/2_Version%20Control%20and%20Branch%20Manajement%20(Git)/praktikum/link%20untuk%20github.md)
 
 output:
 
