@@ -15,7 +15,7 @@
 3. Menjelaskan detail fitur dan letak UI dari desain yang ditemukan
 4. Menentukan Color Pallete yang ada di desain UI/UX tersebut.
 
-[link untuk google doc.md](https://github.com/fauzanfadly/VueJS_Fauzan-Fadly/blob/bb9a44f99f7641cd77b4895435c43caa8488747a/2_Version%20Control%20and%20Branch%20Manajement%20(Git)/praktikum/link%20untuk%20github.md)
+[link untuk google doc.md](https://github.com/fauzanfadly/VueJS_Fauzan-Fadly/blob/14c27392a489fae66fb5cb9d435772e2678d9511/3_Introduction%20UI%20dan%20UX/praktikum/link%20untuk%20google%20doc.md)
 
 output :
 
