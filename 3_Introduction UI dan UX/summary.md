@@ -1,13 +1,13 @@
 # (3) Introduction UI dan UX
 
 ### User Interface (UI)
-> Adalah bentuk tampilan pada suatu produk atau aplikasi yang dapat dihubungkan dengan sistem.
+* Adalah bentuk tampilan pada suatu produk atau aplikasi yang dapat dihubungkan dengan sistem.
 
 ### User Experience (UX)
-> Adalah segala sesuatu yang dirasakan pengguna setiap kali mereka menggunakan suatu produk yang telah disediakan untuk digunakan oleh pengguna.
+* Adalah segala sesuatu yang dirasakan pengguna setiap kali mereka menggunakan suatu produk yang telah disediakan untuk digunakan oleh pengguna.
 
 ### User Persona (UX)
-> Adalah profil pengguna utama yang menjadi gambaran besar untuk "Kilas Orientasi" mencakup tema desain, bentuk, warna, dan modelnya.
+* Adalah profil pengguna utama yang menjadi gambaran besar untuk "Kilas Orientasi" mencakup tema desain, bentuk, warna, dan modelnya.
 
 ## Task
 1. Mencari desain UI/UX dengan tema bebas dan di letakkan di Google Doc
