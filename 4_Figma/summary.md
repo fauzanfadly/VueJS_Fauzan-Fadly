@@ -1,4 +1,4 @@
-# (5) HTML
+# (4) Figma
 
 ## Resume
 1. Figma
@@ -26,8 +26,8 @@
 1. Buat sebuah desain UI/UX dari desain yang telah kalian pilih sebelumnya menggunakan tools Figma!
 2. Buatlah prototype dari desain yang telah kalian buat!
 
-[link untuk figma.md](https://github.com/fauzanfadly/VueJS_Fauzan-Fadly/blob/bb9a44f99f7641cd77b4895435c43caa8488747a/2_Version%20Control%20and%20Branch%20Manajement%20(Git)/praktikum/link%20untuk%20github.md)
+[link untuk figma.md](https://github.com/fauzanfadly/VueJS_Fauzan-Fadly/blob/193f62b2c379afb79ea54fae8816cb73fc9beac7/4_Figma/praktikum/link%20untuk%20figma.md)
 
 output :
 
-![Desain Figma](https://img.freepik.com/free-vector/landing-page-with-laptop_52683-28586.jpg?t=st=1645596016~exp=1645596616~hmac=ed0cf866e413db83f4a263efe8ed8a130dddc1dc22aa81214c8525993cdf9965&w=740)
+![Desain Figma](https://github.com/fauzanfadly/VueJS_Fauzan-Fadly/blob/81baa6ad692ce5c40a519d4e2331ca8b347cf1da/4_Figma/screenshots/screenshot%20desain%20figma.jpg)
