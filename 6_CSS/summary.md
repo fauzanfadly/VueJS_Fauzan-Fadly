@@ -34,10 +34,11 @@
   * Pembuatan halaman hanya menggunakan CSS.
 2. Buatlah sebuah file dengan nama file2.html dengan desain seperti berikut! Di bagian header kalian diberi kebebasan untuk memperbaiki bentuk dan responsive. Yang terpenting konten dan letak dari header masih sama.
 
-[file1.html](https://github.com/fauzanfadly/VueJS_Fauzan-Fadly/blob/bb9a44f99f7641cd77b4895435c43caa8488747a/2_Version%20Control%20and%20Branch%20Manajement%20(Git)/praktikum/link%20untuk%20github.md)
-[file2.html](https://github.com/fauzanfadly/VueJS_Fauzan-Fadly/blob/bb9a44f99f7641cd77b4895435c43caa8488747a/2_Version%20Control%20and%20Branch%20Manajement%20(Git)/praktikum/link%20untuk%20github.md)
+[file1.html](https://github.com/fauzanfadly/VueJS_Fauzan-Fadly/blob/55af80887b47ac558c0485973e7e81578f2f4046/6_CSS/praktikum/file1.html)
+<br/>
+[file2.html](https://github.com/fauzanfadly/VueJS_Fauzan-Fadly/blob/55af80887b47ac558c0485973e7e81578f2f4046/6_CSS/praktikum/file2.html)
 
 output :
 
-![Output file1.html](https://img.freepik.com/free-vector/landing-page-with-laptop_52683-28586.jpg?t=st=1645596016~exp=1645596616~hmac=ed0cf866e413db83f4a263efe8ed8a130dddc1dc22aa81214c8525993cdf9965&w=740)
-![Output file2.html](https://img.freepik.com/free-vector/landing-page-with-laptop_52683-28586.jpg?t=st=1645596016~exp=1645596616~hmac=ed0cf866e413db83f4a263efe8ed8a130dddc1dc22aa81214c8525993cdf9965&w=740)
+![Output file1.html](https://github.com/fauzanfadly/VueJS_Fauzan-Fadly/blob/55af80887b47ac558c0485973e7e81578f2f4046/6_CSS/screenshots/screenshot%20-%20file1.html%20.jpg)
+![Output file2.html](https://github.com/fauzanfadly/VueJS_Fauzan-Fadly/blob/55af80887b47ac558c0485973e7e81578f2f4046/6_CSS/screenshots/screenshot%20-%20file2.html%20.jpg)
