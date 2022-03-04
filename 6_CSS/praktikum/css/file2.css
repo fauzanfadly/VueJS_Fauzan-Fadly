@@ -81,8 +81,34 @@ footer .body p {
   text-align: center;
 }
 
+@media screen and (min-width: 992px) {
+  
+}
+
 @media screen and (max-width: 991px) {
   main .body {
     margin: 0px 50px;
+  }
+
+  .navbar {
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: column;
+  }
+
+  .navbar a {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .navbar .navbar-menu {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .navbar ul {
+    margin-left: -20px;
   }
 }
