@@ -27,8 +27,8 @@
 2. Buatlah body dengan bentuk sebagai berikut!
 3. Buatlah footer dengan bentuk sebagai berikut!
 
-[praktikum_bootstrap.html](https://github.com/fauzanfadly/VueJS_Fauzan-Fadly/blob/55af80887b47ac558c0485973e7e81578f2f4046/6_CSS/praktikum/file1.html)
+[praktikum_bootstrap.html](https://github.com/fauzanfadly/VueJS_Fauzan-Fadly/blob/66e3d060aafcc6de5f6a34f18593903038880b53/7_Bootstrap/praktikum/praktikum_bootstrap.html)
 
 output :
 
-![Output file1.html](https://github.com/fauzanfadly/VueJS_Fauzan-Fadly/blob/55af80887b47ac558c0485973e7e81578f2f4046/6_CSS/screenshots/screenshot%20-%20file1.html%20.jpg)
+![Output file1.html](https://github.com/fauzanfadly/VueJS_Fauzan-Fadly/blob/66e3d060aafcc6de5f6a34f18593903038880b53/7_Bootstrap/screenshots/screenshot%20-%20praktikum%20bootstrap.jpg)
