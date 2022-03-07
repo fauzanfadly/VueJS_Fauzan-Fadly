@@ -1,0 +1,148 @@
+@import url("../vendor/bootstrap/css/bootstrap.min.css");
+
+:root {
+  --pallete_green: rgb(0, 194, 0);
+  --pallete_black: rgba(42, 44, 48, 1);
+}
+
+main {
+  margin-top: 100px;
+}
+
+section {
+  margin-bottom: 200px;
+}
+
+.pallete-text-green {
+  color: var(--pallete_green);
+}
+
+.navbar {
+  border-top: 2px solid rgb(233, 233, 233);
+  border-bottom: 2px solid rgb(233, 233, 233);
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 99;
+}
+
+.navbar .nav-link {
+  color: var(--bs-secondary) !important;
+}
+
+.navbar .active {
+  color: var(--pallete_green) !important;
+}
+
+#section-1 img {
+  width: 100px;
+}
+
+#section-1 .text-light {
+  color: rgb(168, 168, 168) !important;
+  font-size: 14px;
+}
+
+#section-2 img {
+  width: 350px;
+}
+
+#section-2 h1 {
+  font-size: 50px;
+}
+
+#section-2 p {
+  font-size: 20px;
+}
+
+#section-2 ul {
+  list-style-type: "> ";
+  margin-left: -10px;
+}
+
+#section-2 ul,
+#section-2 ul li {
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+#footer {
+  background-color: var(--pallete_black);
+}
+
+#footer h6 {
+  letter-spacing: 1px;
+  font-size: 16px !important;
+}
+
+#footer .footer-brand a {
+  width: fit-content;
+}
+
+#footer .footer-brand a span {
+  letter-spacing: 2px;
+  font-size: 22px;
+  font-weight: 400;
+}
+
+#footer .text-white {
+  font-size: 14px;
+}
+
+
+/* -- Desktop Size -- */
+@media screen and (min-width: 992px) {
+  .mobile-divider {
+    display: none;
+  }
+
+  #footer h6 {
+    margin-bottom: 1.8rem;
+  }
+
+  #footer-menu-wrapper {
+    display: flex;
+  }
+
+  #footer-menu-wrapper .col ul {
+    flex-direction: column;
+  }
+}
+/* -- Desktop Size -- */
+
+
+/* -- Mobile Size -- */
+@media screen and (max-width: 991px) {
+  #section-2 .d-flex {
+    justify-content: center;
+  }
+
+  #footer .col-5 {
+    width: 100% !important;
+  }
+
+  #footer-menu-wrapper {
+    display: block !important;
+  }
+
+  #footer-menu-wrapper .col {
+    margin-top: 1.6rem;
+  }
+
+  #footer-menu-wrapper .col ul li {
+    flex-direction: row;
+    margin-right: 2rem;
+  }
+}
+/* -- Mobile Size -- */
+
+
+#footer-bottom {
+  border-bottom: 2px solid rgb(233, 233, 233);
+}
+
+#footer-bottom a:hover {
+  color: var(--pallete_green);
+}
