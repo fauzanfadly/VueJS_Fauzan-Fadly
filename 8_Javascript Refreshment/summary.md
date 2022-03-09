@@ -41,13 +41,32 @@
         a++; // Kenaikan nilai
         a--; // Pengurangan nilai
       ```
-  + Tipe Data => Untuk membedakan jenis-jenis tipe data nilai / _value_ pada suatu variable
+  + Tipe Data => Untuk membedakan jenis-jenis tipe data nilai / _value_ pada suatu variable.
     - Contoh :
       ```
         var a; // Belum teridentifikasi
         var a = 5; // Integer atau Number
         var a = "Hello World"; // String
+        var a = [1, 2, 3, 4, 5]; // Array
         var a = { nama : "Fauzan", umur : 21 }; // Object
+      ```
+  + Perulangan For => Untuk mengeksekusi suatu fungsi menggunakan perulangan dengan range tertentu.
+    - Contoh :
+      ```
+        for (let angka = 0; angka < 10; angka++) {
+          console.log("nilai angka : " + angka.toString());
+        }
+      ```
+  + Perulangan For In => Untuk mengeksekusi suatu fungsi menggunakan perulangan pada iterasi array tertentu.
+    - Contoh :
+      ```
+        // Mendeklarasi variable array
+        const myArray = ["Fauzan", "Fadly", "Agnes"];
+
+        // Melakuakn perulangan pada element-element yang terdapat pada variable myArray
+        for (let item in myArray) {
+          console.log("Nama saya : " + item);
+        }
       ```
   + Function => Untuk membuat sebuah fungsi yang dapat menyelesaikan perintah tertentu.
     - Contoh :
@@ -63,6 +82,27 @@
         // Pemanggilan Function untuk mengoperasikannya (bisa setelah pendeklarasikan Function)
         beliBuah("Mangga");
       ```
+  + Class => Untuk membuat sebuah grup yang berisikan object-object tertentu.
+    - Contoh :
+    ```
+      // Membuat class Mahasiswa
+      class Mahasiswa {
+
+        // Membuat constructor untuk tiap property pada class Mahasiswa
+        constructor(nama, nomorIndukMahasiswa, jurusan, prodi, status) {
+          this.nama = nama;
+          this.nomorIndukMahasiswa = nomorIndukMahasiswa;
+          this.jurusan = jurusan;
+          this.prodi = prodi;
+          this.status = status;
+        }
+
+        // Contoh untuk  membuat method
+        lulusMahasiswa(statuskelulusan) {
+          console.log("Mahasiswa atas nama " + this.nama + " dinyatakan : " + statuskelulusan);
+        }
+      } 
+    ```
 
 
 ## Task
