@@ -63,7 +63,7 @@
         // Mendeklarasi variable array
         const myArray = ["Fauzan", "Fadly", "Agnes"];
 
-        // Melakuakn perulangan pada element-element yang terdapat pada variable myArray
+        // Melakukan perulangan pada element-element yang terdapat pada variable myArray
         for (let item in myArray) {
           console.log("Nama saya : " + item);
         }
