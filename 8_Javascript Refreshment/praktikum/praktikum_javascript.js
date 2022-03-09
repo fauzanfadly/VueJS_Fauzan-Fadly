@@ -47,7 +47,7 @@ perkenalan();
 
 // No. 3 : 
 const foo = ['Budi', 'Sita', 'Ayu'];
-const [x, y, z] = [foo[0], foo[1], foo[2]];
+const [x, y, z] = foo;
 
 console.log([x, y, z]);
 
