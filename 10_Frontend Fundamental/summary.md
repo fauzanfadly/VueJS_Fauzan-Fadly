@@ -39,4 +39,6 @@
 
 output :
 
-![Output problem_2.js](screenshots/screenshot%20-%20problem_2.js%20.png)
+![Output (screen 599px)](screenshots/screenshot%20-%20latihan_1.html%20-screen%20599px%20.jpg)
+![Output (screen 600px - 959px)](screenshots/screenshot%20-%20latihan_1.html%20-screen%20600px%20~%20959px%20.jpg)
+![Output (screen 960px)](screenshots/screenshot%20-%20latihan_1.html%20-%20screen%20960px%20.jpg)
