@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo List</title>
+  <script src="https://unpkg.com/vue"></script>
+
+  <style>
+    u {
+      cursor: pointer;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    .complete-wrapper {
+      display: flex;
+      margin-top: 1rem;
+    }
+
+    .complete-wrapper p {
+      margin-right: 10px;
+    }
+  </style>
+
+</head>
+<body>
+
+  <div id="app">
+    <div v-if="itemList.length > 0">
+      <ol>
+        <div v-for="(item, index) in itemList" :key="index">
+          <li>{{ item }}</li>
+        </div>
+      </ol>
+    </div>
+
+    <input type="text" v-model="item" v-on:keyup.enter="addItem(item)" placeholder="Ketikkan sesuatu!">
+
+    <button type="button" v-on:click="addItem(item)">Tambahkan</button>
+    <div v-if="itemList.length >= 4">
+      <div class="complete-wrapper">
+        <p>Hebat!</p>
+        <u v-on:click="resetList()">Reset</u>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    const app = Vue.createApp({
+      data: function() {
+        return {
+          itemList: [],
+        }
+      },
+
+      methods: {
+        addItem(item) {
+          if (item != "") {
+            this.itemList.push(item);
+            this.resetInput();
+          }
+        },
+
+        resetInput() {
+          this.item = "";
+        },
+
+        resetList() {
+          this.itemList = []
+        },
+      },
+    })
+
+    app.mount('#app')
+  </script>
+</body>
+</html>
