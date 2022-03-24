@@ -1,152 +1,123 @@
 <template>
-  <div>
 
-    <div class="container mt-5">
-      <div class="row">
-        <div class="card p-0">
-
-          <div class="card-header">
-            <h2 class="text-blue fw-bolder">Todo List</h2>
-          </div>
-
-          <div class="card-body">
-            <div v-if="items.length > 0">
-              <ul class="list-group">
-                <div v-for="(item, index) in items" :key="index">
-                  <li class="list-group-item d-flex">
-                    <div v-if="item.editable" class="w-100">
-                      <div class="d-flex w-100">
-                        <span class="my-auto me-2">{{ (index + 1) }}. </span>
-                        <input
-                          class="form-control"
-                          type="text"
-                          v-model="textEdit"
-                          v-on:keyup.enter="editItem(textEdit, index)"
-                          autofocus
-                        >
-                        <div class="cancel-btn-wrapper">
-                          <button class="btn btn-sm btn-danger" v-on:click="disabledEdit()">x</button>
-                          <span class="mytooltip-cancel-btn">Batal edit</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div v-else class="w-100">
-                      <div class="d-flex w-100">
-                        <span class="my-auto me-1">{{ (index + 1) }}. </span>
-                        <div class="edit-text-wrapper w-100 me-4">
-                          <span class="mytooltip-input-text">Klik untuk edit teks</span>
-                          <p class="my-auto w-100" v-on:click="enableEdit(index)">{{ item.text }}</p>
-                        </div>
-                      </div>
-                    </div>
-                    <span class="ms-auto d-flex">
-                      <button class="btn btn-sm btn-danger me-3" v-on:click="deleteItem(index)">Hapus</button>
-                      <div v-if="item.editable">
-                        <button class="btn btn-warning" v-on:click="editItem(textEdit, index)">Edit</button>
-                      </div>
-                      <div v-else>
-                        <button class="btn btn-warning" v-on:click="enableEdit(index)">Edit</button>
-                      </div>
-                    </span>
-                  </li>
+  <div class="card-body">
+    <div v-if="itemList.length > 0">
+      <ul class="list-group">
+        <div v-for="(item, index) in itemList" :key="index">
+          <li class="list-group-item d-flex">
+            <div v-if="item.editable" class="w-100">
+              <div class="d-flex w-100">
+                <span class="my-auto me-2">{{ (index + 1) }}. </span>
+                <input
+                  class="form-control"
+                  type="text"
+                  v-model="textEdit"
+                  @keyup.enter="editItemOnKey(textEdit, index)"
+                  @keyup.esc="disabledEditOnKey()"
+                  autofocus
+                >
+                <div class="cancel-btn-wrapper">
+                  <Button class="btn-sm btn-danger" @clickAction="disabledEdit()">x</Button>
+                  <span class="mytooltip-cancel-btn">Batal edit</span>
                 </div>
-              </ul>
+              </div>
             </div>
-            <div v-else>
-              <p>Item masih kosong!</p>
+            <div v-else class="w-100">
+              <div class="d-flex w-100">
+                <span class="my-auto me-1">{{ (index + 1) }}. </span>
+                <div class="edit-text-wrapper w-100 me-4">
+                  <span class="mytooltip-input-text">Klik untuk edit teks</span>
+                  <p class="my-auto w-100" @click="enableEditOnTapList(index)">{{ item.text }}</p>
+                </div>
+              </div>
             </div>
-          </div>
-
-          <div class="card-footer p-3">
-            <div class="form-group d-flex">
-              <input
-                class="form-control me-3"
-                type="text"
-                v-model="text"
-                v-on:keyup.enter="addItem(text)"
-                placeholder="Tuliskan sesuatu..."
-              >
-              <button class="btn btn-success" v-on:click="addItem(text)">Tambahkan</button>
-            </div>
-          </div>
-
+            <span class="ms-auto d-flex">
+              <button class="btn btn-sm btn-danger me-3" @click="deleteItem(index)">Hapus</button>
+              <div v-if="item.editable">
+                <Button class="btn-warning" @clickAction="editItem(textEdit, index)">Edit</Button>
+              </div>
+              <div v-else>
+                <Button class="btn-warning" @clickAction="enableEdit(index)">Edit</Button>
+              </div>
+            </span>
+          </li>
         </div>
-
-        <div v-if="items.length >= 4">
-          <div class="row mt-3">
-            <div class="col-md-1">
-              <h3 class="text-blue fw-bolder">Hebat!</h3>
-            </div>
-            <div class="col-md-1 ps-5">
-              <button class="btn btn-outline-primary fw-bolder" v-on:click="resetList()">Reset</button>
-            </div>
-          </div>
-        </div>
-
-      </div>
+      </ul>
     </div>
-
+    <div v-else>
+      <p>Item masih kosong!</p>
+    </div>
   </div>
+
 </template>
 
 <script>
-  export default {
-    name: "ToDoList",
-    data() {
-      return {
-        items: [],
-        text: "",
-        textEdit: "",
-      }
+import Button from '../components/Button.vue';
+
+export default {
+  name: "TodoList",
+
+  components: {
+    Button
+  },
+
+  props: {
+    itemList: {
+      type: Array,
+      require: true,
+    },
+  },
+
+  emits: [
+    'editItem',
+    'editItemOnKey',
+    'disabledEdit',
+    'disabledEditOnKey',
+    'enableEdit',
+    'enableEditOnTapList',
+    'deleteItem',
+  ],
+
+  data() {
+    return {
+      textEdit: "",
+    }
+  },
+
+  methods: {
+    editItem(textEdit, index) {
+      const data = {value: textEdit, index: index}
+      this.$emit('editItem', data)
     },
 
-    methods: {
-      addItem(value) {
-        this.checkEmptyText(value)
-          ? this.items.push({ text: value, editable: false })
-          : null
-        return this.emptyInputText()
-      },
+    editItemOnKey(textEdit, index) {
+      const data = {value: textEdit, index: index}
+      this.$emit('editItemOnKey', data)
+    },
 
-      emptyInputText() {
-        return this.text = ""
-      },
+    disabledEdit() {
+      this.$emit('disabledEdit')
+    },
 
-      checkEmptyText(text) {
-        return text.trim() != "" ? true : false
-      },
+    disabledEditOnKey() {
+      this.$emit('disabledEditOnKey')
+    },
 
-      deleteItem(index) {
-        return index === 0
-          ? this.items.splice(index, 1)
-          : this.items.splice(index, index)
-      },
+    enableEdit(index) {
+      this.$emit('enableEdit', index)
+      return this.textEdit = this.itemList[index].text
+    },
 
-      editItem(value, index) {
-        if (this.checkEmptyText(value)) {
-          this.items[index].text = value
-          return this.disabledEdit()
-        }
-        return null
-      },
+    enableEditOnTapList(index) {
+      this.textEdit = this.$emit('enableEditOnTapList', index)
+      return this.textEdit = this.itemList[index].text
+    },
 
-      enableEdit(index) {
-        this.disabledEdit()
-        this.items[index].editable = !this.items[index].editable
-        return this.textEdit = this.items[index].text
-      },
-
-      disabledEdit() {
-        return this.items.map((element) => {
-          element.editable = false
-        })
-      },
-
-      resetList() {
-        return this.items = []
-      }
-    }
-  }
+    deleteItem(index) {
+      this.$emit('deleteItem', index)
+    },
+  },
+}
 </script>
 
 <style scoped>
