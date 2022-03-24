@@ -33,4 +33,4 @@
 
 output :
 
-![Output todo list file tunggal App.vue](screenshots/screenshot%20-%20todo_list.JPG)
+![Output todo list file tunggal App.vue](./screenshots/screenshot%20-%20todo_list.jpg)
