@@ -35,4 +35,4 @@
 output :
 
 ![Output halaman todo list](./screenshots/screenshot%20-%20todo_list.jpg)
-![Output halaman item detail](./screenshots/screenshot%20-%20item_detail.jpg)
+![Output halaman item detail](./screenshots/screenshot%20-%20item_detail.JPG)
