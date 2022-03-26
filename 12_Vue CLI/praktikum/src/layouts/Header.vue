@@ -2,7 +2,9 @@
   <div>
 
     <div class="card-header">
-      <h2 class="text-blue fw-bolder">Todo List</h2>
+      <h2 class="text-blue fw-bolder">
+        <slot></slot>
+      </h2>
     </div>
 
   </div>
@@ -10,7 +12,7 @@
 
 <script>
 export default {
-  name: "Header"
+  name: "Header",
 }
 </script>
 
