@@ -1,5 +1,4 @@
 import actions from './actions';
-import mutations from './mutations';
 
 const state = () => ({
   itemList: []
@@ -9,6 +8,12 @@ const getters = {
   getItemList(state) {
     return state.itemList;
   },
+};
+
+const mutations = {
+  seIitemList(state, value) {
+    return state.itemList = value;
+  }
 };
 
 export default {
