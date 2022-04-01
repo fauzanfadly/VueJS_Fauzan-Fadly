@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1648805181705" clover="3.2.0">
+  <project timestamp="1648805181705" name="All files">
+    <metrics statements="23" coveredstatements="23" conditionals="0" coveredconditionals="0" methods="11" coveredmethods="11" elements="34" coveredelements="34" complexity="0" loc="23" ncloc="23" packages="1" files="1" classes="1"/>
+    <file name="operations.js" path="E:\Za folder\KAMPUS MERDEKA\Materi\Alterra (VueJS)\VueJS_Fauzan-Fadly\16_Vue Quality Control\praktikum\src\utils\operations.js">
+      <metrics statements="23" coveredstatements="23" conditionals="0" coveredconditionals="0" methods="11" coveredmethods="11"/>
+      <line num="1" count="10" type="stmt"/>
+      <line num="2" count="3" type="stmt"/>
+      <line num="5" count="10" type="stmt"/>
+      <line num="6" count="3" type="stmt"/>
+      <line num="9" count="10" type="stmt"/>
+      <line num="10" count="3" type="stmt"/>
+      <line num="13" count="10" type="stmt"/>
+      <line num="14" count="3" type="stmt"/>
+      <line num="17" count="10" type="stmt"/>
+      <line num="18" count="3" type="stmt"/>
+      <line num="19" count="3" type="stmt"/>
+      <line num="20" count="15" type="stmt"/>
+      <line num="21" count="3" type="stmt"/>
+      <line num="24" count="10" type="stmt"/>
+      <line num="25" count="3" type="stmt"/>
+      <line num="28" count="10" type="stmt"/>
+      <line num="29" count="3" type="stmt"/>
+      <line num="32" count="10" type="stmt"/>
+      <line num="33" count="3" type="stmt"/>
+      <line num="36" count="10" type="stmt"/>
+      <line num="37" count="3" type="stmt"/>
+      <line num="40" count="10" type="stmt"/>
+      <line num="41" count="3" type="stmt"/>
+    </file>
+  </project>
+</coverage>
