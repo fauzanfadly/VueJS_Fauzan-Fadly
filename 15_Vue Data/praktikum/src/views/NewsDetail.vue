@@ -1,38 +1,67 @@
 <template>
-  <div class="card-body">
+  <div>
 
-    <button class="btn btn-sm btn-outline-primary back-btn mb-3" @click="() => this.$router.go(-1)">Kembali</button>
-
-    <h4>{{ news.title }}</h4>
-    <p class="m-0">
-      {{ news.name }} <br>
-      <span v-show="news.author != null" class="text-author">
-        {{ news.author }}
-      </span>
-    </p>
-    <hr>
-    <div class="image-wrapper">
-      <img v-if="news.urlToImage != null" class="img-fluid" :src="news.urlToImage">
-      <p v-else class="text-center">
-        <img src="@/assets/media/images/icons/icon-no-image.png" class="img-fluid">
-      </p>
-    </div>
-    <p class="news-date m-0">
-      {{ moment(news.publishedAt).locale('id').format("dddd, Do MMMM YYYY - h:mm:ss") }}
-    </p>
-    <div class="row mt-3">
-      <div class="col-md-12">
-        <p>
-          {{ news.description }}
-        </p>
-        <p>
-          {{ news.content }}
-        </p>
-        <a :href="news.url">
-          Lihat Selengkapnya...
-        </a>
-      </div>
-    </div>
+    <v-container class="my-5">
+      <v-row>
+        <v-card
+          class="pa-5"
+          elevation="8"
+          outlined
+        >
+          <v-btn
+            color="warning"
+            outlined
+            small
+            @click="() => this.$router.go(-1)"
+            class="mb-3"
+          >
+            Kembali
+          </v-btn>
+          <h4>{{ news.title }}</h4>
+          <p class="m-0">
+            {{ news.name }} <br>
+            <span v-show="news.author != null" class="text-author">
+              {{ news.author }}
+            </span>
+          </p>
+          <v-divider class="my-5"></v-divider>
+          <div v-if="news.urlToImage != null">
+            <v-img
+              lazy-src="https://picsum.photos/id/11/10/6"
+              max-width="800"
+              max-height="450"
+              :src="news.urlToImage"
+            ></v-img>
+          </div>
+          <div v-else>
+            <p class="text-center">
+              <v-img
+                lazy-src="https://picsum.photos/id/11/10/6"
+                max-width="800"
+                max-height="450"
+                src="@/assets/media/images/icons/icon-no-image.png"
+              />
+            </p>
+          </div>
+          <p class="news-date m-0">
+            {{ moment(news.publishedAt).locale('id').format("dddd, Do MMMM YYYY - h:mm:ss") }}
+          </p>
+          <v-row class="mt-3">
+            <v-col md="12">
+              <p>
+                {{ news.description }}
+              </p>
+              <p>
+                {{ news.content }}
+              </p>
+              <a :href="news.url">
+                Lihat Selengkapnya...
+              </a>
+            </v-col>
+          </v-row>
+        </v-card>
+      </v-row>
+    </v-container>
 
   </div>
 </template>
@@ -63,15 +92,6 @@
 </script>
 
 <style scoped>
-  .image-wrapper {
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    max-width: 800px;
-    max-height: 450px;
-    overflow: hidden;
-  }
-
   .news-date {
     font-size: 12px;
     color: rgb(100, 100, 100);

@@ -1,31 +1,15 @@
 <template>
-  <div class="card-header">
+  <div>
+    <v-app-bar
+      color="indigo"
+      dark
+      fixed
+      elevation="0"
+    >
+      <v-app-bar-nav-icon @click="openDrawer"></v-app-bar-nav-icon>
 
-    <h3><b>BERITA'IND</b></h3>
-    <div class="row">
-
-      <div
-        :class="'col-auto ' + (activeCategory == null ? 'active-category' : (activeCategory === '' ? 'active-category' : ''))"
-        @click="redirect('All')"
-      >All</div>
-      <div
-        :class="'col-auto ' + (activeCategory === 'business' ? 'active-category' : '')"
-        @click="redirectWithCategory('Category', 'business')"
-      >Bisnis</div>
-      <div
-        :class="'col-auto ' + (activeCategory === 'entertainment' ? 'active-category' : '')"
-        @click="redirectWithCategory('Category', 'entertainment')"
-      >Entertainment</div>
-      <div
-        :class="'col-auto ' + (activeCategory === 'technology' ? 'active-category' : '')"
-        @click="redirectWithCategory('Category', 'technology')"
-      >Teknologi</div>
-      <div
-        :class="'col-auto ' + (activeCategory === 'sport' ? 'active-category' : '')"
-        @click="redirectWithCategory('Category', 'sport')"
-      >Olahraga</div>
-    </div>
-
+      <v-toolbar-title @click="redirect('All')" class="header-logo"><b>BERITA'IN</b></v-toolbar-title>
+    </v-app-bar>
   </div>
 </template>
 
@@ -33,34 +17,19 @@
 export default {
   name: "Header",
 
-  data() {
-    return {
-      activeCategory: ""
-    }
-  },
+  emits: [
+    "open-drawer"
+  ],
 
   methods: {
+    openDrawer() {
+      return this.$emit("open-drawer")
+    },
+
     redirect(pathName) {
       return this.$router.push({
         name: pathName
       })
-    },
-
-    redirectWithCategory(pathName, paramCategory) {
-      this.$router.push({
-        name: pathName,
-        params: { category: paramCategory }
-      })
-    },
-
-    setActiveCategory() {
-      this.activeCategory = this.$route.params.category
-    }
-  },
-
-  watch: {
-    '$route.path': function() {
-      this.setActiveCategory();
     }
   },
 }
@@ -88,5 +57,9 @@ export default {
     font-weight: bold;
     border-bottom: 2px solid lightblue;
     padding-bottom: 2px !important;
+  }
+
+  .header-logo {
+    cursor: pointer;
   }
 </style>

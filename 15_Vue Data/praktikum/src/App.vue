@@ -1,9 +1,7 @@
 <template>
-  <div id="app">
-
+  <v-app id="app" class="myfont">
     <Main></Main>
-
-  </div>
+  </v-app>
 </template>
 
 <script>
@@ -18,10 +16,33 @@
 </script>
 
 <style>
-  body {
+  :root {
+    --blue: #2196F3;
+    --indigo: #3F51B5;
+  }
+
+  #app {
     font-family: 'Poppins', sans-serif !important;
-    background: url('./assets/media/images/backgrounds/main-bg.jpg') no-repeat center center fixed;
-    background-size: cover;
-    background-color: #f9f9f9;
+  }
+
+  /* width */
+  ::-webkit-scrollbar {
+    width: 5px !important;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: transparent !important;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: orange !important;
+    border-radius: 50px;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: red !important;
   }
 </style>

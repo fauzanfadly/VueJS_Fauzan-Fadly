@@ -1,60 +1,132 @@
 <template>
-  <div class="card-body">
-
-    <div class="row">
-      <div class="col-auto">
-        <p class="mt-2">Cari Berita :</p>
-      </div>
-      <div class="col">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Ketikkan Pencarian..." v-model="searchKeyword" @keyup.enter="getSearchedNews()">
-        </div>
-      </div>
-      <div class="col-auto">
-        <button class="btn btn-outline-primary" @click="getSearchedNews()">
-          Cari
-        </button>
-      </div>
-    </div>
-    <div class="container-fluid p-0 mt-1">
-      <div class="row">
-        <div v-if="isLoading" class="d-flex w-100 justify-content-center py-5">
-          <LoadingAnimation></LoadingAnimation>
-        </div>
-        <div
-          v-else
-          class="col-md-6 my-2 news-item-wrapper"
-          @click="redirectReadNews('Read', index)"
-          v-for="(news, index) in listNews" :key="index"
+  <div>
+    <v-container class="my-5">
+      <v-row>
+        <v-card
+          class="pa-5"
+          elevation="8"
+          width="100%"
+          outlined
         >
-          <div class="row">
-            <div class="col-5">
-              <img v-if="news.urlToImage != null" class="img-fluid" :src="news.urlToImage">
-              <img v-else class="img-fluid" src="@/assets/media/images/icons/icon-no-image.png">
-            </div>
-            <div class="col">
-              <p class="news-title m-0"><b>{{ news.title }}</b></p>
-              <p class="news-desc m-0">{{ news.description }}</p>
-              <p class="news-date text-secondary">{{ moment(news.publishedAt).locale('id').format("Do MMMM, YYYY") }}</p>
-            </div>
-          </div>
-        </div>
-        <div v-if="listNews.length === 0 && !isLoading" class="py-5 w-100">
-          <p class="text-center">
-            <img class="img-fluid" style="max-width: 100px;" src="../assets/media/images/icons/icon-no-data-blue.png" alt="No News Found">
-          </p>
-          <p class="text-center">Maaf terjadi kesalahan, Data yang anda cari tidak ditemukan</p>
-        </div>
-      </div>
-    </div>
-
+          <v-row>
+            <v-col cols="auto" class="pe-0">
+              <p class="mt-2">Cari Berita :</p>
+            </v-col>
+            <v-col>
+              <v-text-field
+                v-model="searchKeyword"
+                @keyup.enter="getSearchedNews()"
+                placeholder="Ketikkan Pencarian..."
+                outlined
+                clearable
+                class="my-text-field"
+                dense
+              ></v-text-field>
+            </v-col>
+            <v-col cols="auto" class="ps-0">
+              <v-btn
+                color="primary"
+                outlined
+                @click="getSearchedNews()"
+                elevation="4"
+              >
+                Cari
+              </v-btn>
+            </v-col>
+          </v-row>
+          <v-divider></v-divider>
+          <v-container fluid class="pa-0 mt-1">
+            <v-row>
+              <div v-if="isLoading">
+                <v-row class="mt-5 ms-5">
+                  <v-col
+                    md="6"
+                    v-for="(n, index) in 4" :key="index"
+                  >
+                    <v-row>
+                      <v-col
+                        sm="11"
+                        md="7"
+                        lg="3"
+                      >
+                        <v-skeleton-loader
+                          width="200"
+                          height="125"
+                          type="image"
+                        ></v-skeleton-loader>
+                      </v-col>
+                      <v-col class="ms-auto">
+                        <v-skeleton-loader
+                          width="200"
+                          type="article"
+                        ></v-skeleton-loader>
+                      </v-col>
+                    </v-row>
+                  </v-col>
+                </v-row>
+              </div>
+              <div v-else class="mt-5 mx-5">
+                <v-row>
+                  <v-col
+                    md="6"
+                    class="my-2 news-item-wrapper"
+                    v-for="(news, index) in listNews" :key="index"
+                  >
+                    <v-row>
+                      <v-col
+                        sm="11"
+                        md="7"
+                        lg="3"
+                      >
+                        <v-img
+                          v-if="news.urlToImage != null"
+                          :src="news.urlToImage"
+                          max-width="300"
+                        />
+                        <v-img
+                          v-else
+                          src="@/assets/media/images/icons/icon-no-image.png"
+                          max-width="300"
+                        />
+                      </v-col>
+                      <v-col>
+                        <p class="news-title m-0"><b>{{ news.title }}</b></p>
+                        <p class="news-desc m-0">{{ news.description }}</p>
+                        <v-row justify="space-between" class="ps-3 px-5 py-1">
+                          <p class="news-date text-secondary">{{ moment(news.publishedAt).locale('id').format("Do MMMM, YYYY") }}</p>
+                          <v-btn
+                            small
+                            color="primary"
+                            @click="redirectReadNews('Read', index)"
+                          >
+                            Read More
+                          </v-btn>
+                        </v-row>
+                      </v-col>
+                    </v-row>
+                  </v-col>
+                </v-row>
+              </div>
+              <div v-if="listNews.length === 0 && !isLoading" class="py-5 mt-3 mx-auto">
+                <v-img
+                  src="../assets/media/images/icons/icon-no-data-blue.png"
+                  alt="No Image"
+                  max-width="100"
+                  class="mx-auto mb-5"
+                />
+                <p class="text-center">Maaf terjadi kesalahan, Data yang anda cari tidak ditemukan</p>
+              </div>
+            </v-row>
+          </v-container>
+        </v-card>
+      </v-row>
+    </v-container>
   </div>
 </template>
 
 <script>
   import * as api from '@/values/api'
   import { mapGetters } from 'vuex'
-  import LoadingAnimation from '../components/LoadingAnimation.vue'
 
   export default {
     name: "NewsList",
@@ -63,10 +135,6 @@
       return {
         searchKeyword: "",
       }
-    },
-
-    components: {
-      LoadingAnimation
     },
 
     computed: {
@@ -117,6 +185,7 @@
       },
 
       init_component() {
+        this.searchKeyword = ""
         this.getData();
       },
     },
@@ -127,7 +196,7 @@
       }
     },
 
-    created() {
+    mounted() {
       this.init_component();
     },
   }
@@ -144,6 +213,7 @@
 
   .news-item-wrapper {
     cursor: pointer;
+    border-radius: 15px;
   }
 
   .news-item-wrapper:hover {
@@ -165,14 +235,6 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
-  }
-
-  .btn-outline-primary {
-    border: 2px solid var(--bs-primary);
-  }
-
-  .btn {
-    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
   }
 
   .news-date {
