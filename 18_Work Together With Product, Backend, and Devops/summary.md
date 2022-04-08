@@ -24,7 +24,7 @@
 1. Deploy aplikasi berita pada latihan materi 8 (Vue UI Framework) menggunakan Netlify atau Heroku.
   > * Pastikan nama halaman tidak random dan halaman tidak rusak ketika dimuat ulang.
 
-[Directory link project berita](./praktikum/link%20website%20hosting%20project%20berita.md)
+[Directory link project berita](./praktikum/link%20website%20hosting%20project%20berita.md)<br/>
 [Website project berita](https://alta-vuejs-news-app.herokuapp.com)
 
 output :
