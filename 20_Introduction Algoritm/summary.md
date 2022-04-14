@@ -27,7 +27,7 @@
   ![shape input atau output](./screenshots/screenshot%20-%20input%20atau%20output.png) <br />
   > * Perkondisian. <br />
   ![shape perkondisian](./screenshots/screenshot%20-%20perkondisian.png) <br />
-  > * Perulangan (Looping).
+  > * Perulangan (Looping). <br />
   ![shape perulangan (looping)](./screenshots/screenshot%20-%20perulangan%20(looping).png)
 
 
