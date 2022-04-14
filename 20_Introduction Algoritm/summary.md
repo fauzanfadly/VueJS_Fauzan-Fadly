@@ -35,7 +35,7 @@
 1. Buatlah flowchart untuk menentukan bilangan prima menggunakan [Whimsical](https://whimsical.com/)
 2. Buatlah flowchart algoritma lampu dan tombol menggunakan [Whimsical](https://whimsical.com/)
 
-[Directory link project berita](./praktikum/link%20flowchart%20whimsical.md)
+[Directory link tugas Flowchart](./praktikum/link%20flowchart%20whimsical.md)
 
 output :
 
