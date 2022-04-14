@@ -19,17 +19,16 @@
 ### Flowchart
 * Flowchart adalah suatu bagian dengan simbol tertentu yang menggambarkan urutan dan hubungan antar proses secara mendetail.
 * Simbol-simbol pada Flowchart yaitu :
-  <br />
-  ![shape mulai atau selesai](./screenshots/screenshot%20-%20mulai%20atau%20selesai.png) <br />
   > * Mulai atau selesai. <br />
-  ![shape proses](./screenshots/screenshot%20-%20proses.png) <br />
+  ![shape mulai atau selesai](./screenshots/screenshot%20-%20mulai%20atau%20selesai.png) <br />
   > * Proses. <br />
-  ![shape input atau output](./screenshots/screenshot%20-%20input%20atau%20output.png) <br />
+  ![shape proses](./screenshots/screenshot%20-%20proses.png) <br />
   > * Input atau output. <br />
-  ![shape perkondisian](./screenshots/screenshot%20-%20perkondisian.png) <br />
+  ![shape input atau output](./screenshots/screenshot%20-%20input%20atau%20output.png) <br />
   > * Perkondisian. <br />
-  ![shape perkondisian](./screenshots/screenshot%20-%20perulangan%20(looping).png) <br />
+  ![shape perkondisian](./screenshots/screenshot%20-%20perkondisian.png) <br />
   > * Perulangan (Looping).
+  ![shape perulangan (looping)](./screenshots/screenshot%20-%20perulangan%20(looping).png)
 
 
 ## Task
