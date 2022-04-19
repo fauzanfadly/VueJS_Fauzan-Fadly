@@ -24,5 +24,5 @@ soal tugas terdapat pada link berikut : [Link tugas](https://docs.google.com/doc
 
 output :
 
-![Output screenshot tugas](./screenshots/screenshot%20-%20relation%20one%20to%one%20keterangan%20(query).jpg)
+![Output screenshot tugas](./screenshots/screenshot%20-%20relation%20one%20to%20one%20keterangan%20(query).jpg)
 ![Output screenshot tugas](./screenshots/screenshot%20-%20relation%20one%20to%20many%20anggota%20(query).jpg)
