@@ -1,0 +1,13 @@
+mutation DeleteAnggota ($deletedId: Int!) {
+  delete_anggota_by_pk(id: $deletedId) {
+    id
+    nama
+    keterangan {
+      id
+      id_anggota
+      nilai
+      pelajaran
+      status
+    }
+  }
+}

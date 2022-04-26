@@ -3,43 +3,23 @@
     <HelloWorld msg="Daftar Anggota"/>
 
     <v-container class="my-5">
+      <v-row justify="center" class="mb-3">
+        <v-col cols="10">
+          <NewAnggotaForm/>
+        </v-col>
+      </v-row>
       <v-row justify="center">
         <v-col
-          v-if="getAllAnggotas.length > 0"
-          cols="12"
-          sm="10"
-          md="10"
-          lg="10"
+          cols="10"
+          v-if="loading"
         >
-          <SearchField
-            :searchName="searchName"
-            @find-anggota="findAnggota"
-          >
-          </SearchField>
-          <v-row>
-            <v-col
-              cols="12"
-              md="12"
-            >
-              <div v-if="searchName === ''">
-                <ListAnggota
-                  :listAnggota="getAllAnggotas"
-                />
-              </div>
-              <div v-else>
-                <ListAnggota
-                  :listAnggota="find"
-                />
-              </div>
-            </v-col>
-          </v-row>
+          <LoadingComponent/>
         </v-col>
         <v-col
+          cols="10"
           v-else
-          cols="12"
-          md="10"
         >
-          <LoadingComponent />
+          <ListAnggota/>
         </v-col>
       </v-row>
     </v-container>
@@ -50,56 +30,23 @@
 // @ is an alias to /src
 import HelloWorld from '@/components/HelloWorld.vue'
 import ListAnggota from '@/components/ListAnggota.vue'
-import SearchField from '@/components/SearchField.vue'
+import NewAnggotaForm from '@/components/NewAnggotaForm.vue'
 import LoadingComponent from '@/components/LoadingComponent.vue'
-import gql from 'graphql-tag'
 
 export default {
   name: 'home',
   components: {
     HelloWorld,
     ListAnggota,
-    SearchField,
+    NewAnggotaForm,
     LoadingComponent
   },
 
-  data() {
-    return {
-      searchName: "",
-      find: []
-    }
-  },
-
-  apollo: {
-    anggota: gql`query MyQuery {
-      anggota {
-        id
-        nama
-        keterangan {
-          id
-          id_anggota
-          nilai
-          pelajaran
-          status
-        }
-      }
-    }`,
-  },
-
   computed: {
-    getAllAnggotas () {
-      return this.anggota ?? []
+    loading () {
+      return this.$store.state.loading
     }
-  },
-
-  methods: {
-    findAnggota (value) {
-      this.searchName = value
-      this.find = this.getAllAnggotas.filter((el) => {
-        return (el.nama.toLowerCase()).includes(this.searchName.toLowerCase())
-      })
-    }
-  },
+  }
 }
 </script>
 

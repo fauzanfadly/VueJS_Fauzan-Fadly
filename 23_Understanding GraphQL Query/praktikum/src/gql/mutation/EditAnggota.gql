@@ -1,0 +1,19 @@
+mutation EditAnggota (
+  $editedId: Int!
+  $editedName: String!
+) {
+  update_anggota_by_pk (
+    pk_columns: { id: $editedId },
+    _set: { nama: $editedName }
+  ) {
+    id
+    nama
+    keterangan {
+      id
+      id_anggota
+      nilai
+      pelajaran
+      status
+    }
+  }
+}

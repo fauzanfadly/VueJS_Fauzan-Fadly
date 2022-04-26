@@ -1,0 +1,15 @@
+mutation AddAnggota ($newName: String!) {
+  insert_anggota(objects: {nama: $newName}) {
+    returning {
+      id
+      nama
+      keterangan {
+        id
+        id_anggota
+        nilai
+        pelajaran
+        status
+      }
+    }
+  }
+}

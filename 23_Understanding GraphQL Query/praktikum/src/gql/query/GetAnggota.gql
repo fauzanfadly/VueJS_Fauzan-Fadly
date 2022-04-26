@@ -1,0 +1,13 @@
+query GetAnggota($name: String!) {
+  anggota(where: {nama: {_ilike: $name}}) {
+    id
+    nama
+    keterangan {
+      id
+      id_anggota
+      nilai
+      pelajaran
+      status
+    }
+  }
+}

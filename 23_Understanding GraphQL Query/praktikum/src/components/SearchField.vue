@@ -8,7 +8,8 @@
         label="Cari Nama Anggota"
         outlined
         dense
-        placeholder="Nama anggota..."
+        hide-details="true"
+        placeholder="Ketikkan Nama anggota..."
         v-model="searchKeyword"
         @input="findAnggota"
       />
