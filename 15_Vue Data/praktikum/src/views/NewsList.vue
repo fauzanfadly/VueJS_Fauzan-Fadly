@@ -150,8 +150,8 @@
           end: api.topHeadlines,
           params: {
             category: this.$route.params.category != null ? this.$route.params.category : null,
-            from: "2022-03-27",
-            to: "2022-03-27",
+            from: "2023-13-10",
+            to: "2023-13-10",
             sortBy: "popularity",
             apiKey: api.apiKey,
             country: "id",
@@ -168,8 +168,8 @@
           params: {
             q: this.searchKeyword,
             category: this.$route.params.category != null ? this.$route.params.category : null,
-            from: "2022-03-27",
-            to: "2022-03-27",
+            from: "2023-13-10",
+            to: "2023-13-10",
             sortBy: "popularity",
             apiKey: api.apiKey,
             country: "id",

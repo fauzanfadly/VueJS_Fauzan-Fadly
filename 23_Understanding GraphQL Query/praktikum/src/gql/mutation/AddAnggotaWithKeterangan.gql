@@ -1,0 +1,19 @@
+mutation AddAnggotaWithKeterangan (
+  $newName: String!
+  $newKeterangan: [InputKeterangan!]!
+) {
+  insert_anggota_with_keterangan (
+    name: { name: $newName },
+    keterangan: $newKeterangan
+  ) {
+    id
+    name
+    keterangan {
+      id
+      id_anggota
+      nilai
+      pelajaran
+      status
+    }
+  }
+}
